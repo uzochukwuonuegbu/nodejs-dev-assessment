@@ -19,7 +19,6 @@ function getUniqueCharaters(results, rickAndMortyInstance) {
         results.map(({ characters = [] }) => {
             characterIds.push(...getIdsFromCharacterUrl(characters));
         });
-        console.log({ characterIds: characterIds.length });
         const uniqueIds = characterIds.filter((v, i, a) => a.indexOf(v) === i);
         return rickAndMortyInstance.getCharacters(uniqueIds);
     });
@@ -30,11 +29,9 @@ function getEpisodesWithCharacters(filter) {
         const { info, results } = yield rickAndMortyInstance.getEpisodes(filter);
         if (!results)
             return;
-        // 
         const freqCounter = {};
         // get all unique characters
         const uniqueCharacters = yield getUniqueCharaters(results, rickAndMortyInstance);
-        console.log({ uniqueCharacters: uniqueCharacters.length });
         // populate unique charaters
         uniqueCharacters.map(x => freqCounter[`${x.id}`] = x);
         const finalRresult = results.map((res) => {
