@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-episodes": "npx tsc && node getEpisodes.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "rickmortyapi": "^1.0.0"
+  }
+}
