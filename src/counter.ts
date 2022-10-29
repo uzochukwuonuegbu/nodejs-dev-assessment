@@ -1,15 +1,15 @@
 type counterFn = (...args: any[]) => any;
 
-const counterFn = (currentCount?: number): [counterFn, counterFn] => {
+export const counterFn = (currentCount?: number): [counterFn, counterFn] => {
     let counter = currentCount || 0;
 
     let firstFn = function () {
-        console.log(counter);
+        return counter;
     }
     let secondFn = function () {
         counter++;
     }
-    return [firstFn, secondFn]
+    return [firstFn, secondFn];
 }
 
 
