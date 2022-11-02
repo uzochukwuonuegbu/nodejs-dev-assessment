@@ -14,19 +14,13 @@ export const counterFn = (currentCount?: number): [counterFn, counterFn] => {
 
 
 
-// const [getA, nextA] = counterFn(1);
-
-// getA()
-// nextA()
-// getA();
-
-
-// const [getB, nextB] = counterFn(10);
-
-// nextB();
-// getA();
-// getB();
-// nextA();
-// getA();
-// nextB();
-// getB();
+const [getA, nextA] = counterFn(1);
+console.log(getA()); // 1
+nextA();
+console.log(getA()); // 2
+const [getB, nextB] = counterFn(10);
+nextB();
+console.log(getA()); // 2
+console.log(getB()); // 11
+nextA();
+console.log(getA()); // 3
