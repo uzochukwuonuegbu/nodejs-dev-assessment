@@ -22,7 +22,7 @@ Question 2: For each option describe what are the pros and cons of this solution
 
    - Cons:
      1. Relies on monitoring successful and failed requests.
-     2. Logging and monitoring could be a pain in the a**.
+     2. Logging and monitoring could be a pain
      3. Generally requires more resources(queues, queue-handlers...)
 
  - Asynchronous Publish/Subscribe(Message broker):
@@ -31,7 +31,7 @@ Question 2: For each option describe what are the pros and cons of this solution
 
    - Cons:
      1. Relies on monitoring successful and failed requests.
-     2. Logging and monitoring could be a pain in the a**.
+     2. Logging and monitoring could be a pain
      3. Generally requires more resources(logs setup, event-handlers...)
 
 
