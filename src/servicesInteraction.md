@@ -25,7 +25,7 @@ Question 2: For each option describe what are the pros and cons of this solution
      2. Logging and monitoring could be a pain
      3. Generally requires more resources(queues, queue-handlers...)
 
- - Asynchronous Publish/Subscribe(Message broker):
+ - Asynchronous Publish/Subscribe(Events):
    - Pros:
      1. Mitigates spikes (if there're more tasks to be done than usual by an one service, they will be done when the service can handle them, as opposed to not being able to do them immediately)
 
